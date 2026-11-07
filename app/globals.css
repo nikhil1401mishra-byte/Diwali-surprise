@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #070B19;
+  --foreground: #FFF5E5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #070B19;
+  color: #FFF5E5;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Typography Classes with Google Fonts Fallback */
+.font-serif {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-handwriting {
+  font-family: 'Great Vibes', 'Alex Brush', 'Dancing Script', cursive;
+}
+
+.font-sans {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Luxury Gold & Flame Glow Shadows */
+.shadow-goldGlow {
+  box-shadow: 0 0 25px rgba(214, 168, 75, 0.45);
+}
+
+.shadow-diya {
+  box-shadow: 0 0 35px 8px rgba(255, 158, 44, 0.35), 0 0 70px 15px rgba(214, 168, 75, 0.15);
+}
+
+.shadow-card {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.75), inset 0 1px 0 0 rgba(255, 230, 160, 0.15);
+}
+
+/* Realistic Diya Flame Flickering Animation */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 12px #FF9E2C);
+  }
+  25% {
+    transform: scale(1.08, 0.94) rotate(1.5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 16px #FFB800);
+  }
+  50% {
+    transform: scale(0.95, 1.05) rotate(-0.5deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 10px #FF7A00);
+  }
+  75% {
+    transform: scale(1.05, 0.97) rotate(1deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 14px #FFB800);
+  }
+}
+
+.animate-flicker {
+  animation: flameFlicker 2.2s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+/* Slow Floating Animation */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Gold Text Shimmer */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #D6A84B 0%, #FFE6A0 50%, #D6A84B 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070B19;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 168, 75, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 168, 75, 0.7);
+}
+
+::selection {
+  background: rgba(214, 168, 75, 0.35);
+  color: #FFE6A0;
+}
+
